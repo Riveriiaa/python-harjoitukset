@@ -1,4 +1,3 @@
-# python-harjoitukset
 ```
 .
 ├── Module1/
