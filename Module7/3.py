@@ -1,7 +1,7 @@
 airports = {}
 
 while True:
-    print("Airport Data Management")
+    print("\nAirport Data Management")
     print("1. Enter a new airport")
     print("2. Fetch airport information")
     print("3. Quit")
@@ -12,18 +12,15 @@ while True:
         icao = input("Enter the ICAO code: ")
         name = input("Enter the airport name: ")
         airports[icao] = name
-        print(f"Airport {name} with ICAO code {icao} has been added.\n")
+        print(f"Airport {name} with ICAO code {icao} has been added.")
 
     elif choice == "2":
         icao = input("Enter the ICAO code: ")
         if icao in airports:
-            print(f"The airport with ICAO code {icao} is {airports[icao]}.\n")
+            print(f"The airport with ICAO code {icao} is {airports[icao]}.")
         else:
-            print(f"No airport found with ICAO code {icao}.\n")
+            print(f"No airport found with ICAO code {icao}.")
 
     elif choice == "3":
         print("Thank you for using the Airport Data Management system. Goodbye!")
         break
-
-    else:
-        print("Invalid option. Please choose 1, 2 or 3.\n")
