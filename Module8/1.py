@@ -2,7 +2,6 @@ import mysql.connector
 
 
 def main():
-    # Yhdistä tietokantaan (muuta tarvittaessa omat tunnuksesi)
     connection = mysql.connector.connect(
         host="localhost",
         port=3306,
@@ -14,10 +13,8 @@ def main():
 
     cursor = connection.cursor()
 
-    # Pyydä ICAO-koodi
     icao = input("Enter the ICAO code of an airport: ").upper()
 
-    # SQL-kysely
     sql = """
     SELECT name, municipality
     FROM airport
@@ -27,7 +24,6 @@ def main():
     cursor.execute(sql, (icao,))
     result = cursor.fetchone()
 
-    # Tarkista löytyikö lentokenttä
     if result:
         name = result[0]
         city = result[1]
